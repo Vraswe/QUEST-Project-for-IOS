@@ -192,51 +192,55 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.9566541314125061" green="0.96086007356643677" blue="0.96071583032608032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjI-kn-NDc">
-                                <rect key="frame" x="76" y="98.5" width="78" height="88"/>
-                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="qjI-kn-NDc" secondAttribute="height" multiplier="39:44" id="r64-MJ-9lG"/>
-                                </constraints>
-                                <state key="normal" image="Природа"/>
-                                <connections>
-                                    <action selector="zabroshka:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="WFw-Za-qeM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2r-JN-dS7">
-                                <rect key="frame" x="0.0" y="98.5" width="78" height="88"/>
-                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="u2r-JN-dS7" secondAttribute="height" multiplier="39:44" id="7NH-sf-SQ0"/>
-                                    <constraint firstAttribute="height" constant="88" id="jSq-ih-wPO"/>
-                                </constraints>
-                                <state key="normal" image="Избранное"/>
-                                <connections>
-                                    <action selector="izbranoe:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="8Wa-Ru-Ucx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-GD-Qy6">
-                                <rect key="frame" x="225" y="99.5" width="76" height="86"/>
-                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="VHf-GD-Qy6" secondAttribute="height" multiplier="38:43" id="NdJ-hg-1zx"/>
-                                </constraints>
-                                <state key="normal" image="Приключение"/>
-                                <connections>
-                                    <action selector="advanture:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="YXV-Gb-g4p"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-OI-FWx">
-                                <rect key="frame" x="302" y="99.5" width="72" height="82"/>
-                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jjL-OI-FWx" secondAttribute="height" multiplier="36:41" id="0st-E8-GzO"/>
-                                </constraints>
-                                <state key="normal" image="Ночью"/>
-                                <connections>
-                                    <action selector="night:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="7Sb-0r-R7S"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-Jt-Wrc">
+                                <rect key="frame" x="5" y="93.5" width="365" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2r-JN-dS7">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="88"/>
+                                        <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="Все">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="all:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="kih-S2-c0X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjI-kn-NDc">
+                                        <rect key="frame" x="73" y="0.0" width="73" height="88"/>
+                                        <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="Заброшки"/>
+                                        <connections>
+                                            <action selector="zabroshka:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="le4-cy-UDA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6W-ge-ck3">
+                                        <rect key="frame" x="146" y="0.0" width="73" height="88"/>
+                                        <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="18" leading="8" bottom="9" trailing="9"/>
+                                        <state key="normal" image="Панорама"/>
+                                        <connections>
+                                            <action selector="picture:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="Ati-yt-Jje"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-GD-Qy6">
+                                        <rect key="frame" x="219" y="0.0" width="73" height="88"/>
+                                        <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="История"/>
+                                        <connections>
+                                            <action selector="history:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="4Gz-eS-jyK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-OI-FWx">
+                                        <rect key="frame" x="292" y="0.0" width="73" height="88"/>
+                                        <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="Stels"/>
+                                        <connections>
+                                            <action selector="stels:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="1Nv-Eq-grh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберете жанр:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvo-mh-TZh">
                                 <rect key="frame" x="11" y="74.5" width="113" height="17"/>
                                 <constraints>
@@ -277,7 +281,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyw-L1-tNE">
                                 <rect key="frame" x="7" y="201.5" width="94" height="35"/>
                                 <color key="backgroundColor" red="0.96841770410000005" green="0.97262555360000003" blue="0.97247916459999995" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="Акции!"/>
+                                <state key="normal" image="UnderButton"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tp-gX-Eye">
                                 <rect key="frame" x="240" y="201.5" width="124" height="35"/>
@@ -287,22 +291,22 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJf-Vg-vo1">
                                 <rect key="frame" x="112" y="201.5" width="94" height="35"/>
                                 <color key="backgroundColor" red="0.96841770410000005" green="0.97262555360000003" blue="0.97247916459999995" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="Акции!"/>
+                                <state key="normal" image="UnderButton"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сортировать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvX-KR-F5M">
-                                <rect key="frame" x="249" y="212" width="71" height="14"/>
+                                <rect key="frame" x="249" y="212.5" width="71" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.96841770410000005" green="0.97262555360000003" blue="0.97247916459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="К карте" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVr-Ef-EuH">
-                                <rect key="frame" x="136.5" y="211.5" width="45" height="15"/>
+                                <rect key="frame" x="137" y="212" width="44.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.20681995153427124" green="0.22972452640533447" blue="0.3126906156539917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Акции!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8N-bM-m1H">
-                                <rect key="frame" x="33.5" y="211.5" width="41" height="15"/>
+                                <rect key="frame" x="34" y="212" width="40.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.20681995149999999" green="0.22972452639999999" blue="0.31269061570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -353,23 +357,23 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="yTA-gJ-8xg">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="yTA-gJ-8xg">
                                                     <rect key="frame" x="70" y="242" width="140" height="59"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Джунгли" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBo-Nm-xol">
-                                                            <rect key="frame" x="0.0" y="0.0" width="70.5" height="20"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="74.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" red="0.2068004906" green="0.22962057590000001" blue="0.31672716140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уровень 4: сложно" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t56-oI-JeH">
-                                                            <rect key="frame" x="0.0" y="20" width="98.5" height="13"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="98.5" height="13"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                             <color key="textColor" red="0.2068004906" green="0.22962057590000001" blue="0.31672716140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~ 2 часа, один человек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuZ-Qz-sO8">
-                                                            <rect key="frame" x="0.0" y="33" width="118.5" height="13"/>
+                                                            <rect key="frame" x="0.0" y="33.5" width="118.5" height="12.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                                             <color key="textColor" red="0.2068004906" green="0.22962057590000001" blue="0.31672716140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -445,62 +449,81 @@
                                     <outlet property="delegate" destination="4U9-Zv-Diy" id="Z9c-zI-Lao"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6W-ge-ck3">
-                                <rect key="frame" x="154" y="103.5" width="70" height="78"/>
-                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="K6W-ge-ck3" secondAttribute="height" multiplier="35:39" id="0hf-m8-esS"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="Панорама"/>
-                                <connections>
-                                    <action selector="panorama:" destination="4U9-Zv-Diy" eventType="touchUpInside" id="nSS-b0-IH4"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Все" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bri-IB-ma5">
+                                <rect key="frame" x="32" y="152" width="19" height="13"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заброшка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yn6-6Q-Vvw">
+                                <rect key="frame" x="88.5" y="152" width="52.5" height="13"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Панорама" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvF-0W-DVR">
+                                <rect key="frame" x="161.5" y="152" width="52" height="13"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScZ-4j-qoN">
+                                <rect key="frame" x="321.5" y="152" width="24.5" height="13"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGT-zI-93Q">
+                                <rect key="frame" x="238.5" y="152" width="44" height="13"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9684177041053772" green="0.97262555360794067" blue="0.97247916460037231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="X8N-bM-m1H" firstAttribute="centerX" secondItem="Xyw-L1-tNE" secondAttribute="centerX" id="22h-Yh-b3L"/>
-                            <constraint firstItem="jjL-OI-FWx" firstAttribute="leading" secondItem="VHf-GD-Qy6" secondAttribute="trailing" constant="1" id="2Em-md-lt8"/>
                             <constraint firstItem="tWE-M0-rJ0" firstAttribute="top" secondItem="Xyw-L1-tNE" secondAttribute="bottom" constant="14" id="30n-Wk-omP"/>
                             <constraint firstItem="UJf-Vg-vo1" firstAttribute="centerY" secondItem="Xyw-L1-tNE" secondAttribute="centerY" id="3Pe-U0-QkX"/>
+                            <constraint firstAttribute="trailing" secondItem="aiy-Jt-Wrc" secondAttribute="trailing" constant="5" id="3fW-0H-ll5"/>
                             <constraint firstItem="X8N-bM-m1H" firstAttribute="centerY" secondItem="Xyw-L1-tNE" secondAttribute="centerY" id="4Xi-hy-Jwk"/>
                             <constraint firstItem="UJf-Vg-vo1" firstAttribute="leading" secondItem="Xyw-L1-tNE" secondAttribute="trailing" constant="11" id="4ZQ-mb-ewu"/>
+                            <constraint firstItem="aiy-Jt-Wrc" firstAttribute="leading" secondItem="4QD-Ie-MsO" secondAttribute="leading" constant="5" id="6Vj-je-qzz"/>
                             <constraint firstItem="gx2-cm-elA" firstAttribute="top" secondItem="x47-uo-FYs" secondAttribute="top" constant="10" id="83l-hJ-cOz"/>
                             <constraint firstItem="8YO-dX-wIq" firstAttribute="leading" secondItem="gx2-cm-elA" secondAttribute="trailing" constant="13" id="8AB-Wf-JEr"/>
+                            <constraint firstItem="K6W-ge-ck3" firstAttribute="centerY" secondItem="EvF-0W-DVR" secondAttribute="centerY" constant="-21" id="9BB-f8-Sqa"/>
                             <constraint firstItem="T8I-Vi-d3T" firstAttribute="trailing" secondItem="x47-uo-FYs" secondAttribute="trailing" id="9RR-XX-P8m"/>
+                            <constraint firstItem="K6W-ge-ck3" firstAttribute="centerX" secondItem="EvF-0W-DVR" secondAttribute="centerX" id="ARy-la-Gkq"/>
                             <constraint firstItem="8Tp-gX-Eye" firstAttribute="leading" secondItem="UJf-Vg-vo1" secondAttribute="trailing" priority="999" constant="34" id="B46-as-BZS"/>
+                            <constraint firstItem="jjL-OI-FWx" firstAttribute="centerY" secondItem="ScZ-4j-qoN" secondAttribute="centerY" constant="-21" id="C3f-JN-X45"/>
                             <constraint firstItem="tWE-M0-rJ0" firstAttribute="trailing" secondItem="x47-uo-FYs" secondAttribute="trailing" constant="2" id="CCj-L6-sZM"/>
                             <constraint firstItem="Xyw-L1-tNE" firstAttribute="leading" secondItem="x47-uo-FYs" secondAttribute="leading" constant="7" id="DWc-WC-1DQ"/>
-                            <constraint firstItem="Xyw-L1-tNE" firstAttribute="top" secondItem="qjI-kn-NDc" secondAttribute="bottom" constant="15" id="F37-EJ-nOe"/>
-                            <constraint firstItem="VHf-GD-Qy6" firstAttribute="centerY" secondItem="u2r-JN-dS7" secondAttribute="centerY" id="HB7-pW-bky"/>
+                            <constraint firstItem="bri-IB-ma5" firstAttribute="centerX" secondItem="u2r-JN-dS7" secondAttribute="centerX" id="HFM-Ac-zCu"/>
                             <constraint firstAttribute="bottom" secondItem="T8I-Vi-d3T" secondAttribute="bottom" id="Hpt-Mo-l6x"/>
                             <constraint firstItem="yvX-KR-F5M" firstAttribute="centerX" secondItem="8Tp-gX-Eye" secondAttribute="centerX" constant="-17.5" id="JCM-jq-vVC"/>
-                            <constraint firstItem="K6W-ge-ck3" firstAttribute="leading" secondItem="qjI-kn-NDc" secondAttribute="trailing" id="Ln5-yO-2rA"/>
                             <constraint firstItem="tWE-M0-rJ0" firstAttribute="leading" secondItem="x47-uo-FYs" secondAttribute="leading" id="M9H-4n-SDJ"/>
-                            <constraint firstItem="u2r-JN-dS7" firstAttribute="top" secondItem="Zvo-mh-TZh" secondAttribute="bottom" constant="7" id="O0q-9q-DJ5"/>
-                            <constraint firstItem="x47-uo-FYs" firstAttribute="trailing" secondItem="jjL-OI-FWx" secondAttribute="trailing" constant="1" id="Pe8-5F-n7i"/>
+                            <constraint firstItem="Yn6-6Q-Vvw" firstAttribute="centerX" secondItem="qjI-kn-NDc" secondAttribute="centerX" id="R5s-vh-P5e"/>
+                            <constraint firstItem="jjL-OI-FWx" firstAttribute="centerX" secondItem="ScZ-4j-qoN" secondAttribute="centerX" id="U0V-qo-jcs"/>
                             <constraint firstItem="8YO-dX-wIq" firstAttribute="centerY" secondItem="gx2-cm-elA" secondAttribute="centerY" id="VHZ-Vw-gZr"/>
                             <constraint firstItem="T8I-Vi-d3T" firstAttribute="leading" secondItem="x47-uo-FYs" secondAttribute="leading" id="VY2-Jc-TNE"/>
                             <constraint firstItem="x47-uo-FYs" firstAttribute="trailing" secondItem="VkF-IS-kSi" secondAttribute="trailing" constant="16" id="Y76-7t-Xgd"/>
                             <constraint firstItem="VkF-IS-kSi" firstAttribute="centerY" secondItem="gx2-cm-elA" secondAttribute="centerY" id="bEg-Ze-kzG"/>
-                            <constraint firstItem="qjI-kn-NDc" firstAttribute="leading" secondItem="u2r-JN-dS7" secondAttribute="trailing" constant="-2" id="d8o-1k-RPv"/>
-                            <constraint firstItem="x47-uo-FYs" firstAttribute="trailing" secondItem="VHf-GD-Qy6" secondAttribute="trailing" constant="74" id="fA0-ty-D6F"/>
+                            <constraint firstItem="aiy-Jt-Wrc" firstAttribute="top" secondItem="Zvo-mh-TZh" secondAttribute="bottom" constant="2" id="eG7-yJ-Gyt"/>
                             <constraint firstItem="T8I-Vi-d3T" firstAttribute="top" secondItem="4QD-Ie-MsO" secondAttribute="top" id="gBH-3a-fv8"/>
                             <constraint firstItem="uVr-Ef-EuH" firstAttribute="centerX" secondItem="UJf-Vg-vo1" secondAttribute="centerX" id="gav-qy-vfW"/>
-                            <constraint firstItem="VHf-GD-Qy6" firstAttribute="leading" secondItem="K6W-ge-ck3" secondAttribute="trailing" constant="1" id="grh-SC-iOE"/>
-                            <constraint firstItem="jjL-OI-FWx" firstAttribute="centerY" secondItem="VHf-GD-Qy6" secondAttribute="centerY" constant="-2" id="jgL-Gk-dBT"/>
+                            <constraint firstItem="bri-IB-ma5" firstAttribute="centerY" secondItem="u2r-JN-dS7" secondAttribute="centerY" constant="21" id="nZy-Wh-bbq"/>
                             <constraint firstItem="yvX-KR-F5M" firstAttribute="centerY" secondItem="Xyw-L1-tNE" secondAttribute="centerY" id="rgU-9i-Ar0"/>
-                            <constraint firstItem="VHf-GD-Qy6" firstAttribute="centerY" secondItem="K6W-ge-ck3" secondAttribute="centerY" id="sEq-Yd-TGY"/>
+                            <constraint firstItem="Xyw-L1-tNE" firstAttribute="top" secondItem="aiy-Jt-Wrc" secondAttribute="bottom" constant="20" id="t7s-eX-QYJ"/>
                             <constraint firstItem="uVr-Ef-EuH" firstAttribute="centerY" secondItem="Xyw-L1-tNE" secondAttribute="centerY" id="tGZ-tI-WyT"/>
+                            <constraint firstItem="Yn6-6Q-Vvw" firstAttribute="centerY" secondItem="qjI-kn-NDc" secondAttribute="centerY" constant="21" id="tS4-lR-uza"/>
                             <constraint firstItem="x47-uo-FYs" firstAttribute="trailing" secondItem="8Tp-gX-Eye" secondAttribute="trailing" constant="11" id="uGY-u0-bye"/>
                             <constraint firstItem="8YO-dX-wIq" firstAttribute="centerY" secondItem="gx2-cm-elA" secondAttribute="centerY" id="uGu-lg-2Oy"/>
+                            <constraint firstItem="VHf-GD-Qy6" firstAttribute="centerY" secondItem="ZGT-zI-93Q" secondAttribute="centerY" constant="-21" id="uev-fn-zpZ"/>
                             <constraint firstItem="Zvo-mh-TZh" firstAttribute="top" secondItem="8YO-dX-wIq" secondAttribute="bottom" constant="8" id="vpo-CM-uL9"/>
-                            <constraint firstItem="u2r-JN-dS7" firstAttribute="leading" secondItem="x47-uo-FYs" secondAttribute="leading" id="wVU-0U-FiC"/>
+                            <constraint firstItem="VHf-GD-Qy6" firstAttribute="centerX" secondItem="ZGT-zI-93Q" secondAttribute="centerX" id="wbn-g6-C42"/>
                             <constraint firstItem="gx2-cm-elA" firstAttribute="leading" secondItem="x47-uo-FYs" secondAttribute="leading" constant="16" id="x27-Qo-dwu"/>
                             <constraint firstItem="8Tp-gX-Eye" firstAttribute="centerY" secondItem="Xyw-L1-tNE" secondAttribute="centerY" id="yaO-IU-CDb"/>
                             <constraint firstItem="Zvo-mh-TZh" firstAttribute="leading" secondItem="x47-uo-FYs" secondAttribute="leading" constant="11" id="zTm-0M-b7I"/>
-                            <constraint firstItem="qjI-kn-NDc" firstAttribute="centerY" secondItem="u2r-JN-dS7" secondAttribute="centerY" id="zbL-bz-EWw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x47-uo-FYs"/>
                     </view>
@@ -508,6 +531,11 @@
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-11"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="AllButton" destination="u2r-JN-dS7" id="CB5-mo-AKC"/>
+                        <outlet property="HistoryButton" destination="VHf-GD-Qy6" id="Vyu-rT-3By"/>
+                        <outlet property="PictureButton" destination="K6W-ge-ck3" id="eOh-TB-EoL"/>
+                        <outlet property="StelsButton" destination="jjL-OI-FWx" id="DWh-dI-EkL"/>
+                        <outlet property="ZabroshkaButton" destination="qjI-kn-NDc" id="ph9-PO-Hvw"/>
                         <outlet property="collectionView" destination="tWE-M0-rJ0" id="hqt-ht-JAo"/>
                     </connections>
                 </viewController>
@@ -580,14 +608,14 @@
         <image name="Blue Сложность" width="43" height="72"/>
         <image name="Mars mini" width="247" height="367"/>
         <image name="Rectangle Copy 3" width="35" height="35"/>
+        <image name="Stels" width="64" height="74"/>
+        <image name="UnderButton" width="94" height="35"/>
         <image name="arrow-left" width="34" height="27"/>
-        <image name="Акции!" width="94" height="35"/>
         <image name="ВДНХ" width="375" height="667"/>
-        <image name="Избранное" width="78" height="88"/>
-        <image name="Ночью" width="72" height="82"/>
-        <image name="Панорама" width="72" height="82"/>
-        <image name="Приключение" width="76" height="86"/>
-        <image name="Природа" width="78" height="88"/>
+        <image name="Все" width="64" height="74"/>
+        <image name="Заброшки" width="74" height="84"/>
+        <image name="История" width="64" height="74"/>
+        <image name="Панорама" width="64" height="74"/>
         <image name="Сортировать" width="124" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
