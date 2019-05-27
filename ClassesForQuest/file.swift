@@ -14,5 +14,4 @@ struct TitleData {
     let pic2: String?
     let pic3: String?
     let pic4: String?
-    
 }
