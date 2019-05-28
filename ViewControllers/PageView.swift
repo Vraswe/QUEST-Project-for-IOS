@@ -30,6 +30,8 @@ class PageView: UIPageViewController {
         ViewController.ImageI = questsList[index].image
         ViewController.name = questsList[index].NAME
         ViewController.Information = questsList[index].Info
+        ViewController.identify = questsList[index].identify
+        
         
         return ViewController
     }

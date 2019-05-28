@@ -20,6 +20,9 @@ class ViewNewestQuests: UIViewController {
     var name = ""
     var ImageI = ""
     var Information = ""
+    var identify = 0
+    var Desciption = ""
+
     
     @IBAction func Q(_ sender: Any) {Action = 1}
     @IBAction func Karta(_ sender: Any) {Action = 2}
@@ -37,6 +40,27 @@ class ViewNewestQuests: UIViewController {
         super.viewDidLoad()
         
         ImageImg.image = UIImage(named: ImageI)
+        ImageImg.image?.accessibilityIdentifier = String(identify)
+        
+        // Tapping Image View
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        ImageImg.isUserInteractionEnabled = true
+        ImageImg.addGestureRecognizer(tapGestureRecognizer)
+        
+        //
+        
+        
+        
+        switch name.count {
+        case 8..<11:
+            NAME.font = UIFont(name: "Helvetica Neue", size: 58)
+        case 11..<14:
+            NAME.font = UIFont(name: "Helvetica Neue", size: 44)
+        case 14..<30:
+            NAME.font = UIFont(name: "Helvetica Neue", size: 38)
+        default:
+            print ("Ok")
+        }
         NAME.text = name
         Info.text = Information
         ControlPage.numberOfPages = numberOfPages
@@ -45,7 +69,21 @@ class ViewNewestQuests: UIViewController {
 
     }
     
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        print (String(tappedImage.image?.accessibilityIdentifier ?? "nil"))
+        // Your action
+        for NeedStruct in questsList {
+            if String(NeedStruct.identify) == String(tappedImage.image?.accessibilityIdentifier ?? "nil") {
+                
+                // MARK: - Present View Controller Info Quest
+                let vc = storyboard?.instantiateViewController(withIdentifier: "InfoQuestViewController") as! DescriptionViewController
+                vc.ourQuest = NeedStruct
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
+    }
     
     
    

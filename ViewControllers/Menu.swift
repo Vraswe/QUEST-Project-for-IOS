@@ -21,37 +21,38 @@ class Menu: UIViewController, UICollectionViewDelegate, UICollectionViewDataSour
 // MARK: - Genre Buttons
 extension Menu {
     @IBAction func all(_ sender: UIButton) {
-        questsList = News
+        questsList = setOfAllQuests
         self.collectionView.reloadData()
         hiddenAll()
-        AllButton.alpha = CGFloat(0.7)
+        AllButton.alpha = CGFloat(0.6)
     }
     @IBAction func zabroshka(_ sender: UIButton) {
         questsList = Zabroshka
         self.collectionView.reloadData()
         hiddenAll()
-        ZabroshkaButton.alpha = CGFloat(0.7)
+        ZabroshkaButton.alpha = CGFloat(0.6)
     }
     @IBAction func picture(_ sender: UIButton) {
         questsList = Panorama
         self.collectionView.reloadData()
         hiddenAll()
-        PictureButton.alpha = CGFloat(0.7)
+        PictureButton.alpha = CGFloat(0.6)
     }
     @IBAction func history(_ sender: UIButton) {
         questsList = Advanture
         self.collectionView.reloadData()
         hiddenAll()
-        HistoryButton.alpha = CGFloat(0.7)
+        HistoryButton.alpha = CGFloat(0.6)
     }
     @IBAction func stels(_ sender: UIButton) {
         questsList = Night
         self.collectionView.reloadData()
         hiddenAll()
-        StelsButton.alpha = CGFloat(0.7)
+        StelsButton.alpha = CGFloat(0.6)
     }
     
     // Lighting by pressing
+    
     func hiddenAll () {
         AllButton.alpha = CGFloat(1)
         ZabroshkaButton.alpha = CGFloat(1)
@@ -73,13 +74,14 @@ extension Menu {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
         
         cell.ImageView.image = UIImage(named: questsList[indexPath.row].imageMini)
-        cell.ImageView.image?.accessibilityIdentifier = questsList[indexPath.row].imageMini
+        // Set identify
+        cell.ImageView.image?.accessibilityIdentifier = String(questsList[indexPath.row].identify)
         cell.name.text = String(questsList[indexPath.row].NAME)
         cell.reit.text = String(questsList[indexPath.row].reit)
         cell.hard.text = String(questsList[indexPath.row].hard)
         cell.str_hard.text = "Уровень: \(questsList[indexPath.row].level_l)"
         cell.str_prize.text = "Приз: \(questsList[indexPath.row].prize_l)"
-        cell.str_time.text = "Время: \(questsList[indexPath.row].time_l)"
+
         
         // Tapping Image View
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
@@ -103,7 +105,30 @@ extension Menu {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         print (String(tappedImage.image?.accessibilityIdentifier ?? "nil"))
         // Your action
+        
+           for NeedStruct in questsList {
+            if String(NeedStruct.identify) == String(tappedImage.image?.accessibilityIdentifier ?? "nil") {
+                
+                // MARK: - Present View Controller Info Quest
+                let vc = storyboard?.instantiateViewController(withIdentifier: "InfoQuestViewController") as! DescriptionViewController
+                vc.ourQuest = NeedStruct
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
     }
 }
 
-
+extension Menu {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        hiddenAll()
+        AllButton.alpha = CGFloat(0.6)
+        AllButton.layer.cornerRadius = 10
+        ZabroshkaButton.layer.cornerRadius = 10
+        PictureButton.layer.cornerRadius = 10
+        HistoryButton.layer.cornerRadius = 10
+        StelsButton.layer.cornerRadius = 10
+        
+    }
+}
