@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Firebase
 
-class ClassTabBar: UITabBarController {
+var removedItem: UIViewController?
+
+class ClassTabBar: UITabBarController{
 
     var Number_of_Section: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let constNumber = Number_of_Section else {return}
-        self.selectedIndex = constNumber
+        
+    
+        
+        Auth.auth().addStateDidChangeListener({ [weak self] (auth, user) in
+            guard let count = self?.viewControllers?.count else {return}
+            guard count > 4 else {return}
+            if user != nil {
+                removedItem = self?.viewControllers?.remove(at: 2)
+            } else {
+                removedItem = self?.viewControllers?.remove(at: 3)
+            }
+        })
         
     }
     

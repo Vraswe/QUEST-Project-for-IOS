@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1053104325253-4359dduaibcu9l75l92kd4s90cjepngl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1053104325253-4359dduaibcu9l75l92kd4s90cjepngl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAAA-3fte-hQuYe0hw63i9tnHjN-J8gZ2I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1053104325253</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>QUEST-IOS-MAIL.GROUP</string>
+	<key>PROJECT_ID</key>
+	<string>quest-87168</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quest-87168.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1053104325253:ios:a03659056336f377</string>
+	<key>DATABASE_URL</key>
+	<string>https://quest-87168.firebaseio.com</string>
+</dict>
+</plist>
